@@ -1,11 +1,11 @@
 function List({ seq, div, list }) {
     return (
-        <div>
+        <ul key={seq}>
             <b>{div}</b>
             { list.map(data =>
                 <li key={data}>{data}</li>
             ) }
-        </div>
+        </ul>
     );
 }
 
@@ -22,7 +22,7 @@ export default function FuncList({ pList }) {
     return (
         <div>
             { pList.map(data =>
-                <List {...data} key={data.seq} />
+                <List {...data} />
             ) }
         </div>
     );
