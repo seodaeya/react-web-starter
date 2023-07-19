@@ -11,9 +11,17 @@ class App extends Component {
      * @param props
      */
     constructor(props) {
+        console.log('App constructor.');
         super(props);
 
-        // 생성자(constructor)에서는 state에 직접 접근해서 처리 가능하다.
+        /**
+         * 생성자(constructor)에서는 state에 직접 접근해서 처리 가능하다.
+         * state가 수정되면, 화면을 다시 그린다(= render recalling).
+         * 당연한 소리지만, render에 그려지는 컴포넌트들이 다시 그려지면, 하위 컴포넌트들도 전체가 갱신된다.
+         * render만 재호출되고, hooks의 경우엔 재호출되지 않는다.
+         *
+         * @type {{mountedTime: number, updatedTime: number, list: [{text: string, seq: number},{text: string, seq: number},{text: string, seq: number}], key: string}}
+         */
         this.state = {
             key: 'Hello!',
             list: [
@@ -27,6 +35,7 @@ class App extends Component {
     }
 
     render() {
+        console.log('App render.');
         return (
             <div>
                 {/* 1. 컴포넌트 값 전달과 state 변경을 감지하여 화면에 노출시켜준다. */}

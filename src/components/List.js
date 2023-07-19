@@ -2,6 +2,7 @@ import {Component} from "react";
 
 class List extends Component {
     render() {
+        console.log('List render.');
         return (
             <ul>
                 { this.props.list.map(data => (

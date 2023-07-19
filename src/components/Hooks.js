@@ -10,6 +10,7 @@ class Hooks extends Component {
      * @param props
      */
     constructor(props) {
+        console.log('Hooks constructor.');
         super(props);
 
         this.state = {
@@ -44,6 +45,7 @@ class Hooks extends Component {
      * @returns {JSX.Element}
      */
     render() {
+        console.log('Hooks render.');
         return (
             <div>
                 <ul>
