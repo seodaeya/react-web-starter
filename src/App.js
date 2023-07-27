@@ -7,6 +7,8 @@ import Hooks from "./components/Hooks";
 // function 방식
 import Counter from "./components/Counter";
 import FuncList from "./components/FuncList";
+import Axios from "./components/Axios";
+import Style from "./components/Style";
 
 class App extends Component {
     /**
@@ -84,9 +86,15 @@ class App extends Component {
                 {/* 2.1. 함수형 state 사용방법을 배운다. */}
                 <h2>2.1. Counter</h2>
                 <Counter />
-                {/* 2.2. 함수형 값 전달방식과  */}
+                {/* 2.2. 함수형 값 전달방식과 list */}
                 <h2>2.2. FuncList</h2>
                 <FuncList pList={this.state.divList}/>
+                {/* 2.3. Axios를 배운다. */}
+                <h2>2.3. Axios</h2>
+                <Axios />
+                {/* 2.4. Style을 배운다. */}
+                <h2>2.4. Style</h2>
+                <Style />
             </div>
         );
     }
