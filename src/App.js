@@ -57,7 +57,8 @@ class App extends Component {
                 {/* 1.1. 컴포넌트 값 전달과 state 변경을 감지하여 화면에 노출시켜준다. */}
                 <h1>1. class 방식</h1>
                 <h2>1.1. Header</h2>
-                <Header text={this.state.key} />
+                <Header // text={this.state.key} tag 내에서는 이렇게 주석을 쓸 수 있다.
+                />
 
                 {/* 1.2. click 이벤트를 이용하여 state를 수정하며, state, click을 배운다. */}
                 <h2>1.2. State</h2>
